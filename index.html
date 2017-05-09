@@ -15,6 +15,33 @@
 
 <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
 <link href="css/custom.css" rel="stylesheet">
+<!-- jQuery -->
+<script src="js/jquery-1.11.3.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.interactive_bg.js"></script>
+<script>
+	$(".bg").interactive_bg({
+		strength : 25, // Movement Strength when the cursor is moved. The higher, the faster it will reacts to your cursor. The default value is 25.
+		scale : 1.05, // The scale in which the background will be zoomed when hovering. Change this to 1 to stop scaling. The default value is 1.05.
+		animationSpeed : "100ms", // The time it takes for the scale to animate. This accepts CSS3 time function such as "100ms", "2.5s", etc. The default value is "100ms".
+		contain : true, // This option will prevent the scaled object/background from spilling out of its container. Keep this true for interactive background. Set it to false if you want to make an interactive object instead of a background. The default value is true.
+		wrapContent : true
+	// This option let you choose whether you want everything inside to reacts to your cursor, or just the background. Toggle it to true to have every elements inside reacts the same way. The default value is false
+	});
+	$(document).ready(function() {
+		$(".bg").interactive_bg(); // function call
+	});
+
+	// change background size on window resize
+	$(window).resize(function() {
+		$(".bg > .ibg-bg").css({
+			width : $(window).outerWidth(),
+			height : $(window).outerHeight()
+		})
+	});
+</script>
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -63,8 +90,7 @@
 	</nav>
 
 	<!-- Content -->
-	<div class="container">
-
+	<div>
 		<!-- Heading -->
 		<div class="row">
 			<div class="col-lg-12">
@@ -135,7 +161,8 @@
 					<a href="#">A house. Or church. Or building with a red roof.</a>
 				</h3>
 				<p>The Icelandic people appreciate their colored roofs as a way
-					to counteract its mere 1300 hours of sunlight per year.</p>
+					to counteract the mere 1300 hours of sunlight they receive per
+					year.</p>
 			</div>
 		</div>
 		<!-- /.row -->
@@ -168,8 +195,8 @@
 				<h3>
 					<a href="#">A sheep</a>
 				</h3>
-				<p>Contrary to common belief, sheep enjoy the incredible views
-					just as much as humans do. Just look at the attentive ears and the
+				<p>Contrary to common belief, sheep enjoy incredible views just
+					as much as humans do. Just look at the attentive ears and the
 					beaming look on his face.</p>
 			</div>
 			<div class="col-md-6 portfolio-item">
@@ -198,9 +225,9 @@
 				<h3>
 					<a href="#">Man in sun</a>
 				</h3>
-				<p>Sometimes can't help but lace up your tennis shoes, throw on
-					some running shorts, and bask in the London summer air. We all know
-					the feeling.</p>
+				<p>Sometimes you just can't help but lace up your tennis shoes,
+					throw on some running shorts, and bask in the French summer air. We
+					all know the feeling.</p>
 			</div>
 		</div>
 
@@ -265,7 +292,7 @@
 				</h3>
 				<p>The pure Colorado water may look safe to drink, but rest
 					assured you may contract giardia if you forget your SteriPEN on
-					this day trip.</p>
+					this epic day trip.</p>
 			</div>
 		</div>
 
@@ -361,7 +388,8 @@
 						<h3>Adventure Traveler</h3>
 					</div>
 					<div class="col-sm-4 footer-blurb-item">
-						<span style="font-size: 5em;" class="glyphicon glyphicon-education"></span>
+						<span style="font-size: 5em;"
+							class="glyphicon glyphicon-education"></span>
 						<h3>Student</h3>
 					</div>
 				</div>
@@ -372,18 +400,13 @@
 		<div class="copyright">
 			<div class="container">
 				<p>
-					<i>Copyright <a href="bday.html">&copy;</a> Haley Schusterman 2017</i>
+					<i>Copyright <a href="bday.html">&copy;</a> Haley Schusterman
+						2017
+					</i>
 				</p>
 			</div>
 		</div>
 	</footer>
-
-
-	<!-- jQuery -->
-	<script src="js/jquery-1.11.3.min.js"></script>
-
-	<!-- Bootstrap Core JavaScript -->
-	<script src="js/bootstrap.min.js"></script>
 
 </body>
 

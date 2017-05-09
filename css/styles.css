@@ -81,3 +81,6 @@ display: block;
 * html .clearfix {
 height: 1%;
 }
+img {
+    image-orientation: from-image;
+}
